@@ -6,7 +6,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Dictionary</title>
   
+  <link rel="stylesheet" href="flex-style.css">
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="loader.css">
   <script src="./script.js"></script>
 
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
@@ -16,10 +18,23 @@
     crossorigin="anonymous"></script>
 </head>
 <body>
-  <div class="container">
-    <div class="item">
-      <input type="text" name="word" id="input-word">
-      <button id="search-button"></button>
+  <div class="d-flex flex-wrap justify-center align-center h-100vh">
+    <div id="content" class="item-12 d-flex flex-wrap justify-center align-center">
+      <div class="item-1">
+        <div class="d-flex justify-center">
+          <div class="search-form d-flex justify-center">
+            <input type="text" name="word" id="input-word">
+            <button id="search-button"></button>
+          </div>
+        </div>
+      </div>
+      <div class="item-12">
+        <div id="card-container" class="d-flex flex-wrap justify-center gap-2">
+        </div>
+      </div>
+    </div>
+    <div id="loader" class="d-none">
+      <div class="lds-dual-ring"></div>
     </div>
   </div>
 </body>
