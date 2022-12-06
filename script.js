@@ -11,7 +11,6 @@ async function getMeaning (word) {
   } else {
     const meanings = data.reduce((acum, info) => {
       info.meanings.forEach((meaning) => {
-        console.log(meaning)
         if (!acum[meaning.partOfSpeech]) acum[meaning.partOfSpeech] = []
         const definitions = Object.values(meaning.definitions).map(({ definition }) => definition)
         acum[meaning.partOfSpeech].push(...definitions)
